@@ -1,0 +1,22 @@
+[package]
+name = "fistulosum"
+version = "0.1.0"
+authors = ["Nathaniel Ringo <remexre@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+documentation = "https://remexre.github.io/fistulosum"
+homepage = "https://github.com/remexre/fistulosum"
+repository = "https://github.com/remexre/fistulosum.git"
+
+[[bin]]
+name = "fistulosum"
+doc = false
+
+[dependencies]
+getopts = "0.2"
+ocl     = "0.11"
+regex   = "0.1"
+rustls  = "0.1"
+
+[replace]
+"ocl:0.11.0" = { git = "https://github.com/cogciprocate/ocl", rev = "7cb525e" }

@@ -1,0 +1,12 @@
+language: rust
+rust:
+- stable
+
+script:
+- cargo build --verbose
+- cargo doc --verbose
+after_success:
+- echo '<meta http-equiv="refresh" content="0;url=fistulosum/index.html">' > target/doc/index.html
+- pip install --user ghp-import
+- ghp-import -n target/doc
+- git push -qf https://${GH_TOKEN}@github.com/remexre/fistulosum.git gh-pages
